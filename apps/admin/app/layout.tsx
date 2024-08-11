@@ -1,7 +1,8 @@
 import "@repo/ui/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-
+import Sidebar from "../components/sidebar";
+import { Toaster } from "@ui/components/ui/sonner"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -16,7 +17,11 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+          <Toaster/>
+          <Sidebar>{children}</Sidebar>
+
+      </body>
     </html>
   );
 }

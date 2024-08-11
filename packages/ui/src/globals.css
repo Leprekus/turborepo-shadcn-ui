@@ -87,3 +87,32 @@
   vertical-align: middle;
   border-radius: 5px;
 }
+
+/* Class to apply macOS-like scrollbar to specific elements */
+.scrollbar::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: transparent; /* Transparent background track */
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  transition: background-color 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.3); /* Dark handle */
+  border-radius: 7px; /* Rounded corners for the handle */
+  border: 2px solid transparent; /* Add space around the handle */
+  background-clip: padding-box; /* Ensure the background-color is not affected by the border */
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5); /* Darker handle on hover */
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:active {
+  background-color: rgba(0, 0, 0, 0.7); /* Even darker handle on active state */
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: background-color 0.3s ease;
+}
